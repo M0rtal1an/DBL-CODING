@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import sqlite3
-from geotext import GeoText
 import json
 import os
 
@@ -54,5 +53,5 @@ database_path = 'C:/GIT DBL1/airlines.db'
 conversations = get_tweet_sequences(database_path)
 
 for sequence_id, conversation in conversations.items():
-    if len(conversation):
+    if len(conversation) > 3:
         print(f"Conversation {sequence_id}: {conversation[:]}")

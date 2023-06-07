@@ -9,7 +9,7 @@ conn = sqlite3.connect(r"C:\Users\Usuario\Desktop\TUE\DBL- 1\airlines.db")
 cursor = conn.cursor()
 
     # Create a table for the tweets
-cursor.execute('''CREATE TABLE IF NOT EXISTS tweets
+cursor.execute('''CREATE TABLE IF NOT EXISTS 
                     (created_at TEXT, id INTEGER PRIMARY KEY, id_str TEXT, text TEXT,
                     source TEXT, truncated INTEGER, in_reply_to_status_id INTEGER,
                     in_reply_to_status_id_str TEXT, in_reply_to_user_id INTEGER,
@@ -25,11 +25,11 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS tweets
 
     # Insert the data into the table
 
-directory = "C:/Users/Usuario/Desktop/TUE/DBL- 1/data/xtra"  # Get the current working directory (cwd)
+directory = "C:/Users/Usuario/Desktop/TUE/DBL- 1/datax/data"  # Get the current working directory (cwd)
 files = os.listdir(directory)  # Get all the files in that directory
 
 for file in files:
-    with open(f"C:/Users/Usuario/Desktop/TUE/DBL- 1/data/xtra/{file}") as tweets:
+    with open(f"C:/Users/Usuario/Desktop/TUE/DBL- 1/datax/data/{file}") as tweets:
         print(file)
         data = tweets.read()
         lines = data.split('\n')

@@ -4,7 +4,7 @@ import sqlite3
 from geotext import GeoText
 
 
-conn = sqlite3.connect('D:/Code/airlines.db')
+conn = sqlite3.connect('C:/GIT DBL1/airlines.db')
 
 data_query_Virgin_raw = """--sql
     SELECT id, created_at,in_reply_to_status_id, in_reply_to_user_id, in_reply_to_screen_name, user_id, user_name, user_followers_count, user_friends_count,user_favourites_count, user_created_at, user_location, user_verified, text, user_geo_enabled, user_default_profile, is_quote_status

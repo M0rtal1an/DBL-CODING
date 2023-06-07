@@ -3,7 +3,7 @@ from langdetect import detect
 import pandas as pd
 import matplotlib.pyplot as plt
 # connect to the database
-conn = sqlite3.connect(r"C:\Users\20221619\PycharmProjects\pythonProject1\cleanairlines.db")
+conn = sqlite3.connect(r"C:\GIT DBL1\airlines.db")
 
 # create a cursor
 cur = conn.cursor()
@@ -22,9 +22,10 @@ tweets = cur.fetchall()
 lang_counts = {}
 
 # detect the language of each tweet text
-
+i=1
 for tweet in tweets:
-
+    print(i)
+    i+=1
     try:
 
         lang = detect(tweet[0])
