@@ -60,5 +60,10 @@ time_differences_df = pd.DataFrame(time_differences).transpose()
 
 # Calculate the average time difference for each row
 average_time_difference = time_differences_df.mean(axis=1)
+# Convert the average time difference from seconds to minutes
+average_time_difference_in_minutes = average_time_difference / 60
 
-print(average_time_difference)
+average_time_difference_in_minutes = average_time_difference_in_minutes.tolist()
+print(average_time_difference_in_minutes)
+
+#print(average_time_difference_in_minutes)
